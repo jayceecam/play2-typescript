@@ -7,14 +7,14 @@ object PluginBuild extends Build {
     id = "play2-typescript", base = file(".")
   ).settings(
     sbtPlugin := true,
-    scalaVersion := "2.9.1",
+    scalaVersion := "2.9.2",
     description := "SBT plugin for handling TypeScript assets in Play 2",
     resolvers += "Typesafe repository" at "http://repo.typesafe.com/typesafe/releases/",
     libraryDependencies ++= Seq(
       //"play" %% "play" % "2.0.3",
-      "org.scalatest" %% "scalatest" % "1.7.1" % "test"
+      "org.scalatest" %% "scalatest" % "1.9.1" % "test"
     ),
-    addSbtPlugin("play" % "sbt-plugin" % "2.0.3"),
+    addSbtPlugin("play" % "sbt-plugin" % "2.1-12142012"),
     organization := "com.github.mumoshu",
     version := "0.1.2-SNAPSHOT",
     publishTo <<= version { v: String =>
