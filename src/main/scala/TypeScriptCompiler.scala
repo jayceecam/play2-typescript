@@ -17,7 +17,7 @@ object TypeScriptCompiler {
       val cmd = if (System.getProperty("os.name").startsWith("Windows"))
         Seq("cmd", "/C", "tsc")
       else
-        Seq("tsc")
+        Seq("/bin/sh", "tsc")
       val tscOutput = runCompiler(
         cmd ++ options ++ writeDeclarationsOptions ++ Seq(tsFile.getAbsolutePath)
       )
